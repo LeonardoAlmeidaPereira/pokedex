@@ -46,7 +46,7 @@ $(document).ready(function() {
 });
 
 async function loadPokemonList() {
-    $('#loading').show();
+    $('#loading').removeClass('hidden');
     $('#btn-load-more').hide();
 
     try {
@@ -65,14 +65,14 @@ async function loadPokemonList() {
         console.error(error);
         alert('Erro ao carregar lista.');
     } finally {
-        $('#loading').hide();
+        $('#loading').addClass('hidden');
         $('#btn-load-more').show();
     }
 }
 
 async function searchPokemon(query) {
     $('#pokemon-list').empty();
-    $('#loading').show();
+    $('#loading').removeClass('hidden');
     $('#btn-load-more').hide();
 
     try {
@@ -86,9 +86,9 @@ async function searchPokemon(query) {
         $('#pokemon-list').html(pokemon.toHTML());
 
     } catch (error) {
-        $('#pokemon-list').html(`<div class="w-full text-center"><p class="text-red-500 font-bold">Pokémon "${query}" não encontrado.</p></div>`);
+        $('#pokemon-list').html(`<div class="col-span-full w-full text-center"><p class="text-red-500 font-bold text-lg">Pokémon "${query}" não encontrado.</p></div>`);
     } finally {
-        $('#loading').hide();
+        $('#loading').addClass('hidden');
     }
 }
 

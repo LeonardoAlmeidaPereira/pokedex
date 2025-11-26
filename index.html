@@ -15,7 +15,7 @@
         </div>
     </nav>
 
-    <div id="loading" class="hidden justify-center my-10">
+    <div id="loading" class="hidden flex justify-center my-10">
         <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
     </div>
 
@@ -38,13 +38,13 @@
     </div>
 
     <div id="pokemonModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4 backdrop-blur-sm" tabindex="-1">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg relative overflow-hidden animate-fade-in" onclick="event.stopPropagation()">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg relative overflow-hidden">
             <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 focus:outline-none z-10 bg-white/80 rounded-full p-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            <div id="modal-content" class="p-0 max-h-[85vh] overflow-y-auto custom-scrollbar">
+            <div id="modal-content" class="p-0 max-h-[90vh] overflow-y-auto custom-scrollbar">
                 </div>
         </div>
     </div>
